@@ -74,7 +74,7 @@ export default function Home() {
           fontFamily: "'Inter', system-ui, sans-serif",
         }}
       >
-        Happy sipping ☕ — your local Basecamp
+        Happy sipping ☕ — your local Basecamp · 45 locations across the PNW
       </p>
     </div>
   );
