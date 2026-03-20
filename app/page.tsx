@@ -14,6 +14,28 @@ export default function Home() {
     >
       {/* Header */}
       <div style={{ textAlign: 'center', marginBottom: '32px', maxWidth: '480px', width: '100%' }}>
+        {/* Logo */}
+        <div
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            marginBottom: '20px',
+          }}
+        >
+          <span style={{ fontSize: '22px' }}>⛺</span>
+          <span
+            style={{
+              fontFamily: "'Lora', Georgia, serif",
+              fontSize: '18px',
+              fontWeight: 700,
+              color: '#3d2b1f',
+              letterSpacing: '0.5px',
+            }}
+          >
+            Basecamp Coffee
+          </span>
+        </div>
         <p
           style={{
             fontSize: '12px',
