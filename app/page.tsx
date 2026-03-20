@@ -98,6 +98,21 @@ export default function Home() {
       >
         Happy sipping ☕ — your local Basecamp · 45 locations across the PNW
       </p>
+      <a
+        href="/leadership-one-pager.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          marginTop: '8px',
+          fontSize: '12px',
+          color: '#b07d4f',
+          fontFamily: "'Inter', system-ui, sans-serif",
+          textDecoration: 'underline',
+          opacity: 0.7,
+        }}
+      >
+        Program Overview →
+      </a>
     </div>
   );
 }
