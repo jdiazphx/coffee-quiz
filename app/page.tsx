@@ -96,7 +96,7 @@ export default function Home() {
           fontFamily: "'Inter', system-ui, sans-serif",
         }}
       >
-        Happy sipping ☕ — your local Basecamp · 45 locations across the PNW
+        Happy sipping ☕ — your local Basecamp · 45 locations across the PNW · Chief Experience Officer
       </p>
       <a
         href="/leadership-one-pager.pdf"
