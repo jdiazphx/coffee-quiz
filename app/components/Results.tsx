@@ -20,14 +20,25 @@ export default function Results({ results, onRetake }: ResultsProps) {
   const top = results[0];
   const [visible, setVisible] = useState(false);
   const [barsReady, setBarsReady] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    // Slight delay so the exit animation of the quiz has finished
     const t1 = setTimeout(() => setVisible(true), 50);
-    // Bars animate after the panel has faded in
     const t2 = setTimeout(() => setBarsReady(true), 400);
     return () => { clearTimeout(t1); clearTimeout(t2); };
   }, []);
+
+  const handleShare = async () => {
+    const text = `I'm a ${top.name}! My perfect cup: ${top.drink}. Find your coffee personality ☕`;
+    const url = 'https://mainelycoolers.com';
+    if (navigator.share) {
+      await navigator.share({ title: "What's Your Coffee Personality?", text, url });
+    } else {
+      await navigator.clipboard.writeText(`${text}\n${url}`);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
 
   return (
     <div
@@ -187,6 +198,26 @@ export default function Results({ results, onRetake }: ResultsProps) {
           Show them your results and earn bonus Basecamp Rewards points!
         </p>
       </div>
+
+      <button
+        onClick={handleShare}
+        style={{
+          width: '100%',
+          padding: '15px',
+          background: '#b07d4f',
+          border: 'none',
+          borderRadius: '12px',
+          color: '#fffaf5',
+          fontSize: '15px',
+          fontWeight: 600,
+          cursor: 'pointer',
+          marginBottom: '10px',
+          fontFamily: "'Inter', system-ui, sans-serif",
+          transition: 'background 0.2s ease',
+        }}
+      >
+        {copied ? 'Copied to clipboard! ✓' : 'Share My Results ↗'}
+      </button>
 
       <button
         onClick={onRetake}
