@@ -113,6 +113,21 @@ export default function Home() {
       >
         Program Overview →
       </a>
+      <a
+        href="/90-day-rollout-plan.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          marginTop: '4px',
+          fontSize: '12px',
+          color: '#b07d4f',
+          fontFamily: "'Inter', system-ui, sans-serif",
+          textDecoration: 'underline',
+          opacity: 0.7,
+        }}
+      >
+        90-Day Rollout Plan →
+      </a>
     </div>
   );
 }
